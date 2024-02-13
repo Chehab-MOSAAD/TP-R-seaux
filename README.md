@@ -1,17 +1,20 @@
-# TP-Reseaux
-USE in CONNECTED mode :
-This work focuses on the use of SOCK_STREAM sockets AF_INET. It is a reminder of the operations to be performed on the one hand by a client process and on the other by a server process.
-
-Operations performed in order on the SERVER side :
-• Created a listening socket.
-• Associated a socket address (IP address and port number) with the service.
-• Listen to the socket for incoming TCP connection establishment requests.
-• Accept an incoming TCP connection and create a new socket dedicated to that connection.
-• Receive/Read and then Transmit/Write to the new socket.
-• Closed the new socket
-
-Operations carried out in order on the CLIENT side :
-• Created a socket.
-• Connected to the server by giving the address of the remote socket (server IP address and port number service).
-• Send/Write and then Receive/Read to the socket.
-• Closed the socket.
+La traduction française est ci-dessous. 👇
+<body>
+<h1>TP Networks</h1>
+<p>This work contains four projects that demonstrate different aspects of network programming and data communication using sockets and protocols. The projects are:</p>
+<ul>
+    <li><b>Client/Server Application over TCP/IP</b>: This project implements a client-server application that uses TCP/IP sockets to communicate over the network. The application is a simple version of the battleship game, where the client sends coordinates to the server and receives feedback on whether it hit or missed the hidden treasure on the board. The server maintains the state of the game and responds to the client's requests.</li>
+    <li><b>Exchange Protocol on UDP/IP Routing Information</b>: This project implements a peer-to-peer protocol that uses UDP/IP sockets to exchange routing information between neighboring routers. The protocol is a basic version of a dynamic routing protocol, where each router periodically broadcasts its known routes to its neighbor and updates its routing table based on the received information. The protocol aims to achieve convergence and consistency among the routers.</li>
+    <li><b>File Transfer Application</b>: This project implements an application that can transfer files between two processes using two different modes: connected and non-connected. In the connected mode, the application relies on the transport layer to establish and manage connections, send and receive data units, and handle disconnections. In the non-connected mode, the application operates without continuous connections, and reads and writes data intermittently. The application ensures smooth communication with the transport layer and efficient file transfer operations in both modes.</li>
+    <li><b>Simple Transfer Protocol</b>: This project implements a simplified data transfer protocol that consists of two components: transmitter and receiver. The transmitter is responsible for initiating connections, sending data packets, and terminating connections. The transmitter continuously sends data packets, and handles acknowledgments and rejections from the receiver, but does not have advanced flow control or error recovery mechanisms. The receiver is responsible for setting up the network, receiving data packets, verifying their integrity, and processing them accordingly. The receiver communicates with the application layer to deliver the received data and manage the disconnections, following the simplified data transfer protocol without flow control or error recovery features.</li>
+</ul>
+<hr>
+<h1>TP Reseaux</h1>
+<p>Ce travail contient quatre projets qui illustrent différents aspects de la programmation réseau et de la communication de données en utilisant des sockets et des protocoles. Les projets sont :</p>
+<ul>
+    <li><b>Application Client/Serveur sur TCP/IP</b> : Ce projet implémente une application client-serveur qui utilise des sockets TCP/IP pour communiquer sur le réseau. L'application est une version simplifiée du jeu de la bataille navale, où le client envoie des coordonnées au serveur et reçoit un retour sur le fait qu'il a touché ou raté le trésor caché sur le plateau. Le serveur maintient l'état du jeu et répond aux requêtes du client.</li>
+    <li><b>Protocole d'échange d'informations de routage sur UDP/IP</b> : Ce projet implémente un protocole pair-à-pair qui utilise des sockets UDP/IP pour échanger des informations de routage entre les routeurs voisins. Le protocole est une version basique d'un protocole de routage dynamique, où chaque routeur diffuse périodiquement ses routes connues à son voisin et met à jour sa table de routage en fonction des informations reçues. Le protocole vise à atteindre la convergence et la cohérence entre les routeurs.</li>
+    <li><b>Application de transfert de fichiers</b> : Ce projet implémente une application qui peut transférer des fichiers entre deux processus en utilisant deux modes différents : connecté et non connecté. En mode connecté, l'application s'appuie sur la couche transport pour établir et gérer les connexions, envoyer et recevoir des unités de données, et gérer les déconnexions. En mode non connecté, l'application fonctionne sans connexions continues, et lit et écrit des données de manière intermittente. L'application assure une communication fluide avec la couche transport et des opérations de transfert de fichiers efficaces dans les deux modes.</li>
+    <li><b>Protocole de transfert simple</b> : Ce projet implémente un protocole de transfert de données simplifié qui se compose de deux composants : émetteur et récepteur. L'émetteur est responsable d'initier les connexions, d'envoyer des paquets de données, et de terminer les connexions. L'émetteur envoie continuellement des paquets de données, et gère les accusés de réception et les rejets du récepteur, mais n'a pas de mécanismes avancés de contrôle de flux ou de récupération d'erreurs. Le récepteur est responsable de mettre en place le réseau, de recevoir les paquets de données, de vérifier leur intégrité, et de les traiter en conséquence. Le récepteur communique avec la couche application pour livrer les données reçues et gérer les déconnexions, en suivant le protocole de transfert de données simplifié sans contrôle de flux ni fonctionnalités de récupération d'erreurs.</li>
+</ul>
+</body>
