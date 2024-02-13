@@ -145,9 +145,18 @@ int main(int argc, char **argv){
     } while (res);
 
     /* Fermeture connexion TCP */
-    // TODO
 
-    /* Terminaison du jeu : le joueur a trouvé le tresor */
+    if (shutdown(sok_id, SHUT_RDWR) == -1) {
+        perror("Shutdown error");
+        close(sok_id);
+        return EXIT_FAILURE;
+    }
+
+    if (close(sok_id) == -1) {
+        perror("Close error");
+        return EXIT_FAILURE;
+    }
+
     afficher_jeu(jeu, res, points, coups);
     printf("\nBRAVO : trésor trouvé en %d essai(s) avec %d point(s)"
            " au total !\n\n",

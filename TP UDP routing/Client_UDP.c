@@ -59,8 +59,15 @@ int main(int argc, char * argv[]) {
 
     /* Réception de la réponse */
     /*-------------------------*/
+    char buffer[MSG_MAX_SIZE];
 
-    /* --> A COMPLETER <-- */
+    socklen_t server_adr_len = sizeof(server_adr);
+
+    if ( (recvfrom(sock_id, buffer, MSG_MAX_SIZE, 0, (struct sockaddr*) &server_adr, &server_adr_len)) < 0) {
+        perror("recvfrom error");
+        exit(EXIT_FAILURE);
+    }
+    printf("--> Message reçu du serveur: %s\n", buffer);
 
     /* Fermeture de la socket */
     /*------------------------*/
